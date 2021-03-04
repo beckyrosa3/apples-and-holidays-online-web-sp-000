@@ -68,7 +68,8 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   holiday_hash.map do |season, holidays|
     holidays.map do |holiday_name, supplies|
-      is supplies.include?("BBQ") ? holiday_name : nil
+      if supplies.include?("BBQ") ? holiday_name : nil
+      end
     end
   end
 end
